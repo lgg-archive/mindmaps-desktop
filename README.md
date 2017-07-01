@@ -18,9 +18,7 @@ built with [Electron](http://electron.atom.io)
 
 * `git clone https://github.com/lgg/mindmaps-desktop && mindmaps-desktop`
 * `npm install`
-* `npm run build`
-    * or follow [build instructions](https://electron.atom.io/docs/tutorial/application-distribution/)
-    * [electron-builder](https://github.com/electron-userland/electron-builder) is used by default
+* follow [build instructions](https://electron.atom.io/docs/tutorial/application-distribution/)
 * run built version from `out/` folder
 
 ## Contributing
