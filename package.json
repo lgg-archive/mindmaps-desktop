@@ -7,15 +7,15 @@
     "update-src": "rm -rf ./app/ && git clone -b gh-pages --single-branch https://github.com/lgg/mindmaps app",
     "preinstall": "npm run update-src",
     "start": "electron .",
-    "build-with-packager": "electron-packager . mindmaps-desktop --ignore='.idea' --out out",
     "build": "npm run update-src && npm run dist",
-    "build2": "echo 'no builder provided'",
     "pack": "electron-builder --dir",
-    "dist": "electron-builder"
+    "dist": "electron-builder",
+    "build2": "echo 'no builder provided'",
+    "build-with-packager": "electron-packager . mindmaps-desktop --ignore='.idea' --out out"
   },
   "build": {
     "appId": "com.electron.mindmaps",
-    "asar": false,
+    "asar": true,
     "directories": {
       "app": "."
     },
