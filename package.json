@@ -1,0 +1,39 @@
+{
+  "name": "mindmaps-desktop",
+  "version": "1.0.0",
+  "description": "Desktop app for mindmaps built with electron",
+  "main": "main.js",
+  "scripts": {
+    "update-src": "rm -rf ./app/ && git clone -b gh-pages --single-branch https://github.com/lgg/mindmaps app",
+    "preinstall": "npm run update-src",
+    "start": "electron .",
+    "build-with-packager": "electron-packager . mindmaps-desktop --ignore='.idea' --out out",
+    "build": "npm run update-src && npm run dist",
+    "build2": "echo 'no builder provided'",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder"
+  },
+  "build": {
+    "appId": "com.electron.mindmaps",
+    "asar": false,
+    "directories": {
+      "app": "."
+    },
+    "mac": {
+      "category": "public.app-category.productivity"
+    }
+  },
+  "repository": "https://github.com/lgg/mindmaps-desktop",
+  "keywords": [
+    "Electron",
+    "mindmap",
+    "mindmaps",
+    "offline",
+    "mindmaps-desktop"
+  ],
+  "author": "lgg",
+  "license": "AGPL-3.0",
+  "devDependencies": {
+    "electron": "~1.6.2"
+  }
+}
